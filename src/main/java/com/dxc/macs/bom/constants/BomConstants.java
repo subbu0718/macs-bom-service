@@ -2,9 +2,6 @@ package com.dxc.macs.bom.constants;
 
 public class BomConstants {
 
-    private BomConstants(){
-
-    }
     public static final String BUY_PARTS = "Buy";
     public static final String ALL_STRING = "All";
     public static final String WARNING = "Warning";
@@ -58,4 +55,8 @@ public class BomConstants {
     public static final String AUTH_TYPE = "AuthType";
     public static final String CANCELLED = "Cancelled";
     public static final String CANCELLED_C = "C";
+	
+    private BomConstants(){
+
+    }
 }
