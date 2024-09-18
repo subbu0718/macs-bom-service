@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bom-ms-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bom-ms-svc
+  template:
+    metadata:
+      labels:
+        app: bom-ms-svc
+    spec:
+      hostNetwork: true
+      containers:
+        - name: bom-ms-svc
+          image: 174537795428.dkr.ecr.eu-south-1.amazonaws.com/bom-ms-svc:14122023.0
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "500Mi"  # Requesting 500 Megabytes of memory
+            limits:
+              memory: "2Gi"  # Limiting to 2 Gigabytes of memory          
+          ports:
+            - containerPort: 8093
+          readinessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+            httpGet:
+              path: /actuator/health
+              port: 8093
+          livenessProbe:
+            initialDelaySeconds: 20
+            successThreshold: 1
+            failureThreshold: 3
+            periodSeconds: 5
+            httpGet:
+              path: /actuator/health
+              port: 8093
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: common-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: JDBC_URL
+              valueFrom:
+                secretKeyRef:
+                  name: rdsmysql  # Name of the Secret
+                  key: JDBC_URL   # Key in the Secret
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: rdsmysql  # Name of the Secret
+                  key: DB_USERNAME   # Key in the Secret
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rdsmysql  # Name of the Secret
+                  key: DB_PASSWORD  # Key in the Secret
+            - name: RRR_SERVICE_API
+              valueFrom:
+                configMapKeyRef:
+                  key: RRR_SERVICE_API
+                  name: common-config
+          volumeMounts:
+            - name: macs-efs-volume  # Give a name
+              mountPath: /opt/app/logs  # Specify the mount path in the container
+      volumes:
+        - name: macs-efs-volume  # Give it the same name as in volumeMounts
+          persistentVolumeClaim:
+            claimName: efs-claim2  # Specify the name of the PVC                   
+                  
+---
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: bom-ms-svc
+spec:
+  selector:
+    app: bom-ms-svc
+  ports:
+    - protocol: "TCP"
+      port: 8093 # The port that the service is running on in the cluster
+      targetPort: 8093 # The port exposed by the service

@@ -1,0 +1,68 @@
+spring:
+  profiles:
+    active: local
+server:
+  port: 8093
+---
+# local profile-specific datasource configuration
+
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3310/macs
+    username: macs_user
+    password: MACS_Prd$9_23
+    platform: mysql
+
+# dev profile-specific datasource configuration
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/Macs_testing_DB
+    username: macs_production_user
+    password: MACS_Prd$9_23
+    platform: mysql
+
+# QA profile-specific AWS datasource configuration jdbc:mysql://dbmacsprod.cggpxjgbswq4.eu-south-1.rds.amazonaws.com:3306/macs
+---
+spring:
+  profiles: qa
+  datasource:
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    platform: mysql
+---
+# PROD profile-specific AWS datasource configuration jdbc:mysql://${DB_HOST}:3306/macs
+spring:
+  profiles: prod
+  datasource:
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    platform: mysql
+---
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+web:
+  cors:
+    allowed-origins: "*"
+gateway:
+  threer-api: ${RRR_SERVICE_API}
+
+

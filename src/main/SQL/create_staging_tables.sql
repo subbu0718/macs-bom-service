@@ -1,0 +1,211 @@
+CREATE TABLE `cc_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(2) DEFAULT NULL,
+  `field_2` varchar(50) DEFAULT NULL,
+  `field_3` varchar(50) DEFAULT NULL,
+  `field_4` varchar(50) DEFAULT NULL,
+  `field_5` varchar(50) DEFAULT NULL,
+  `field_6` varchar(50) DEFAULT NULL,
+  `field_7` varchar(50) DEFAULT NULL,
+  `field_8` varchar(50) DEFAULT NULL,
+  `field_9` varchar(80) DEFAULT NULL,
+  `field_10` varchar(50) DEFAULT NULL,
+  `field_11` varchar(50) DEFAULT NULL,
+  `field_12` varchar(50) DEFAULT NULL,
+  `field_13` varchar(50) DEFAULT NULL,
+  `field_14` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `cms_list_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(3) DEFAULT NULL,
+  `field_2` varchar(100) DEFAULT NULL,
+  `field_3` varchar(2000) DEFAULT NULL,
+  `field_4` varchar(9000) DEFAULT NULL,
+  `field_5` varchar(4000) DEFAULT NULL,
+  `field_6` varchar(100) DEFAULT NULL,
+  `field_7` varchar(50) DEFAULT NULL,
+  `field_8` varchar(50) DEFAULT NULL,
+  `field_9` varchar(100) DEFAULT NULL,
+  `field_10` varchar(50) DEFAULT NULL,
+  `field_11` varchar(20) DEFAULT NULL,
+  `field_12` varchar(100) DEFAULT NULL,
+  `field_13` varchar(50) DEFAULT NULL,
+  `field_14` varchar(50) DEFAULT NULL,
+  `field_15` varchar(50) DEFAULT NULL,
+  `field_16` varchar(20) DEFAULT NULL,
+  `field_17` varchar(20) DEFAULT NULL,
+  `field_18` varchar(20) DEFAULT NULL,
+  `field_19` varchar(20) DEFAULT NULL,
+  `field_20` varchar(20) DEFAULT NULL,
+  `field_21` varchar(20) DEFAULT NULL,
+  `field_22` varchar(20) DEFAULT NULL,
+  `field_23` varchar(20) DEFAULT NULL,
+  `field_24` varchar(20) DEFAULT NULL,
+  `field_25` varchar(20) DEFAULT NULL,
+  `field_26` varchar(20) DEFAULT NULL,
+  `field_27` varchar(20) DEFAULT NULL,
+  `field_28` varchar(20) DEFAULT NULL,
+  `field_29` varchar(20) DEFAULT NULL,
+  `field_30` varchar(20) DEFAULT NULL,
+  `field_31` varchar(20) DEFAULT NULL,
+  `field_32` varchar(20) DEFAULT NULL,
+  `field_33` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `mc_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(2) DEFAULT NULL,
+  `field_2` varchar(12) DEFAULT NULL,
+  `field_3` varchar(100) DEFAULT NULL,
+  `field_4` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+
+CREATE TABLE `mp_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(3) DEFAULT NULL,
+  `field_2` varchar(100) DEFAULT NULL,
+  `field_3` varchar(2000) DEFAULT NULL,
+  `field_4` varchar(9000) DEFAULT NULL,
+  `field_5` varchar(4000) DEFAULT NULL,
+  `field_6` varchar(100) DEFAULT NULL,
+  `field_7` varchar(50) DEFAULT NULL,
+  `field_8` varchar(50) DEFAULT NULL,
+  `field_9` varchar(100) DEFAULT NULL,
+  `field_10` varchar(50) DEFAULT NULL,
+  `field_11` varchar(20) DEFAULT NULL,
+  `field_12` varchar(100) DEFAULT NULL,
+  `field_13` varchar(50) DEFAULT NULL,
+  `field_14` varchar(50) DEFAULT NULL,
+  `field_15` varchar(50) DEFAULT NULL,
+  `field_16` varchar(20) DEFAULT NULL,
+  `field_17` varchar(20) DEFAULT NULL,
+  `field_18` varchar(20) DEFAULT NULL,
+  `field_19` varchar(20) DEFAULT NULL,
+  `field_20` varchar(20) DEFAULT NULL,
+  `field_21` varchar(20) DEFAULT NULL,
+  `field_22` varchar(20) DEFAULT NULL,
+  `field_23` varchar(20) DEFAULT NULL,
+  `field_24` varchar(20) DEFAULT NULL,
+  `field_25` varchar(20) DEFAULT NULL,
+  `field_26` varchar(20) DEFAULT NULL,
+  `field_27` varchar(20) DEFAULT NULL,
+  `field_28` varchar(20) DEFAULT NULL,
+  `field_29` varchar(20) DEFAULT NULL,
+  `field_30` varchar(20) DEFAULT NULL,
+  `field_31` varchar(20) DEFAULT NULL,
+  `field_32` varchar(20) DEFAULT NULL,
+  `field_33` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `mps_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(3) DEFAULT NULL,
+  `field_2` varchar(100) DEFAULT NULL,
+  `field_3` varchar(2000) DEFAULT NULL,
+  `field_4` varchar(9000) DEFAULT NULL,
+  `field_5` varchar(4000) DEFAULT NULL,
+  `field_6` varchar(100) DEFAULT NULL,
+  `field_7` varchar(50) DEFAULT NULL,
+  `field_8` varchar(50) DEFAULT NULL,
+  `field_9` varchar(100) DEFAULT NULL,
+  `field_10` varchar(50) DEFAULT NULL,
+  `field_11` varchar(20) DEFAULT NULL,
+  `field_12` varchar(100) DEFAULT NULL,
+  `field_13` varchar(50) DEFAULT NULL,
+  `field_14` varchar(50) DEFAULT NULL,
+  `field_15` varchar(50) DEFAULT NULL,
+  `field_16` varchar(20) DEFAULT NULL,
+  `field_17` varchar(20) DEFAULT NULL,
+  `field_18` varchar(20) DEFAULT NULL,
+  `field_19` varchar(20) DEFAULT NULL,
+  `field_20` varchar(20) DEFAULT NULL,
+  `field_21` varchar(20) DEFAULT NULL,
+  `field_22` varchar(20) DEFAULT NULL,
+  `field_23` varchar(20) DEFAULT NULL,
+  `field_24` varchar(20) DEFAULT NULL,
+  `field_25` varchar(20) DEFAULT NULL,
+  `field_26` varchar(20) DEFAULT NULL,
+  `field_27` varchar(20) DEFAULT NULL,
+  `field_28` varchar(20) DEFAULT NULL,
+  `field_29` varchar(20) DEFAULT NULL,
+  `field_30` varchar(20) DEFAULT NULL,
+  `field_31` varchar(20) DEFAULT NULL,
+  `field_32` varchar(20) DEFAULT NULL,
+  `field_33` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `sa_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(2) DEFAULT NULL,
+  `field_2` bigint DEFAULT NULL,
+  `field_3` varchar(400) DEFAULT NULL,
+  `field_4` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `sac_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(3) DEFAULT NULL,
+  `field_2` bigint DEFAULT NULL,
+  `field_3` varchar(1000) DEFAULT NULL,
+  `field_4` varchar(1000) DEFAULT NULL,
+  `field_5` varchar(1000) DEFAULT NULL,
+  `field_6` varchar(1000) DEFAULT NULL,
+  `field_7` varchar(1000) DEFAULT NULL,
+  `field_8` varchar(1000) DEFAULT NULL,
+  `field_9` varchar(1000) DEFAULT NULL,
+  `field_10` varchar(1000) DEFAULT NULL,
+  `field_11` varchar(1000) DEFAULT NULL,
+  `field_12` varchar(1000) DEFAULT NULL,
+  `field_13` varchar(50) DEFAULT NULL,
+  `field_14` bigint DEFAULT NULL,
+  `field_15` tinyint DEFAULT NULL,
+  `field_16` tinyint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `sb_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(2) DEFAULT NULL,
+  `field_2` bigint NOT NULL,
+  `field_3` varchar(20) DEFAULT NULL,
+  `field_4` varchar(20) DEFAULT NULL,
+  `field_5` varchar(250) DEFAULT NULL,
+  `field_6` tinyint DEFAULT NULL,
+  `field_7` tinyint DEFAULT NULL,
+  `field_8` tinyint DEFAULT NULL,
+  `field_9` tinyint DEFAULT NULL,
+  `field_10` tinyint DEFAULT NULL,
+  `field_11` tinyint DEFAULT NULL,
+  `field_12` varchar(20) DEFAULT NULL,
+  `field_13` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `sg_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(2) DEFAULT NULL,
+  `field_2` bigint DEFAULT NULL,
+  `field_3` varchar(100) DEFAULT NULL,
+  `field_4` tinyint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `smc_staging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `field_1` varchar(3) DEFAULT NULL,
+  `field_2` bigint DEFAULT NULL,
+  `field_3` int DEFAULT NULL,
+  `field_4` varchar(200) DEFAULT NULL,
+  `field_5` varchar(200) DEFAULT NULL,
+  `field_6` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ;
